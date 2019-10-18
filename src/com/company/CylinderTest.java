@@ -13,6 +13,6 @@ public class CylinderTest {
         vol = cyl2.vol();
         System.out.println("radius = 8 height = 6 volume = " + vol);
         sa = cyl2.sa();
-        System.out.println("surface area = " + sa);
+        System.out.println("surface area = " + sa); 
     }
 }
