@@ -15,16 +15,27 @@ public class Line {
         end1 = new Point();
         end2 = new Point();
     }
-    /*
+
     public double distance()
     {
-        //You may find Math.pow(base, power) and Math.sqrt(num) useful
+        double a = Math.pow(end2.getX()-end1.getX(),2);
+        double b = Math.pow(end2.getY()-end1.getY(),2);
+        double c = (a + b);
+        double d = Math.sqrt(c);
+        System.out.print(d);
+        return d;
     }
+
     public Point midpoint()
     {
-
+    double e = end2.getX() + end1.getX();
+    double f = e/2;
+    double g = end2.getY() + end1.getY();
+    double h = g/2;
+    double i = f + h;
+    System.out.rpi
     }
-
+/*
     public boolean sameLength(Line otherLine)
     {
 
@@ -57,7 +68,7 @@ public class Line {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        Line l1 = new Line(-1,-3, 2,1);
+        Line l1 = new Line(-1,-3, 2,4);
 
         double m = l1.slope();
         System.out.println(l1);
