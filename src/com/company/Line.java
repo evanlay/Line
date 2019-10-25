@@ -4,43 +4,40 @@ public class Line {
     private Point end1;
     private Point end2;
 
-    public Line(double x1, double y1, double x2, double y2)
-    {
-        end1 = new Point(x1,y1);
-        end2 = new Point(x2,y2);
+    public Line(double x1, double y1, double x2, double y2) {
+        end1 = new Point(x1, y1);
+        end2 = new Point(x2, y2);
 
     }
-    public Line()		// default constructor
+
+    public Line()        // default constructor
     {
         end1 = new Point();
         end2 = new Point();
     }
 
-    public double distance()
-    {
-        double a = Math.pow(end2.getX()-end1.getX(),2);
-        double b = Math.pow(end2.getY()-end1.getY(),2);
+    public double distance() {
+        double a = Math.pow(end2.getX() - end1.getX(), 2);
+        double b = Math.pow(end2.getY() - end1.getY(), 2);
         double c = (a + b);
         double d = Math.sqrt(c);
-        System.out.print(d);
         return d;
     }
 
-    public Point midpoint()
-    {
-    double e = end2.getX() + end1.getX();
-    double f = e/2;
-    double g = end2.getY() + end1.getY();
-    double h = g/2;
-    double i = f + h;
-    System.out.rpi
+    public Point midpoint() {
+        double e = (end2.getX() + end1.getX())/2;
+        double f = (end2.getY() + end1.getY())/2;
+        Point g = new Point(e,f);
+        return g;
     }
-/*
+
     public boolean sameLength(Line otherLine)
     {
-
+        double d1 = this.distance();
+        double d2 = otherLine.distance();
+        return Math.abs(d1-d2) <= .001;
     }
-    */
+
     public double slope()
     {
         double m;
@@ -68,26 +65,26 @@ public class Line {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        Line l1 = new Line(-1,-3, 2,4);
+        Line l1 = new Line(2,2, 10,2);
 
         double m = l1.slope();
         System.out.println(l1);
         System.out.println("Slope = " + m);
 
-        Line l2 = new Line(0,0,3,4);
+        Line l2 = new Line(0,4,8,4);
         System.out.println(l2);
         System.out.println("Slope = " + l2.slope());
         System.out.println("Parallel? " + l1.parallel(l2));
 
 
-        //double dist = l1.distance();
-        //Point p1 = l1.midpoint();
+        double dist = l1.distance();
+        Point p1 = l1.midpoint();
 
-        //System.out.println("distance = " + dist);
-        //System.out.println("Midpoint = " + p1);
+        System.out.println("Distance = " + dist);
+        System.out.println("Midpoint = " + p1);
 
-        //System.out.println("distance = " + l2.distance());
-        //System.out.println("Same length? " + l1.sameLength(l2));
+        System.out.println("Distance = " + l2.distance());
+        System.out.println("Same length? " + l1.sameLength(l2));
 
     }
 
