@@ -1,3 +1,4 @@
+// Evan Lay
 package com.company;
 
 public class Point {
@@ -29,3 +30,10 @@ public class Point {
     }
 
 }
+/*
+Parallel? true
+Distance = 8.0
+Midpoint = (6.0, 2.0)
+Distance = 8.0
+Same length? true
+ */
